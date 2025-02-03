@@ -15,7 +15,7 @@ public class IdentityHashMapTest {
         hashMap.put(i,"Rustam");
         hashMap.put(b,"Rustam");
 
-        System.out.println(map);
-        System.out.println(hashMap);
+        System.out.println(map.size());
+        System.out.println(hashMap.size());
     }
 }
