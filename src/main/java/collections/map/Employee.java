@@ -2,11 +2,12 @@ package collections.map;
 
 import java.util.Objects;
 
-public class Person {
+public class Employee {
     String name;
+
     int age;
 
-    public Person(String name,int age){
+    public Employee(String name,int age){
         this.name = name;
         this.age = age;
     }
@@ -25,10 +26,8 @@ public class Person {
     }
 
 
-
     @Override
     public int hashCode() {
         return Objects.hash(name, age);
     }
-
 }

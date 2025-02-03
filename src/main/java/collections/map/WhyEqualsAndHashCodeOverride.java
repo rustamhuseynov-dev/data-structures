@@ -4,16 +4,14 @@ import java.util.HashMap;
 
 public class WhyEqualsAndHashCodeOverride {
     public static void main(String[] args) {
-        HashMap<Person,String> hashMap = new HashMap<>();
-        Person person = new Person();
-        person.age = 10;
-        person.name = "Salih";
-
-        Person person1 = new Person();
-        person1.age = 10;
-        person1.name = "Salih";
+        HashMap<Object,String> hashMap = new HashMap<>();
+        Person person = new Person("Salih",10);
+        Employee employee = new Employee("Salih",10);
+        Person person1 = new Person("Salih",10);
         hashMap.put(person,"salam");
-        hashMap.put(person1,"Aleykum");
+        hashMap.put(employee,"Aleykum");
+        System.out.println("employee : " + employee.hashCode());
+        System.out.println("person : " + person.hashCode());
         System.out.println(hashMap.size());
         System.out.println(hashMap.get(person1));
         System.out.println(hashMap.get(person));
